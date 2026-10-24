@@ -1,0 +1,17 @@
+# 実行時に生成されるホストの状態ファイル（保存先・更新履歴・ログ）
+host/config.json
+host/last_update.json
+host/debug.log
+
+# install-nativehost.ps1 が生成するマニフェスト（拡張IDと絶対パスを含む）
+host/com.ytdlext.host.json
+
+# Python
+__pycache__/
+*.py[cod]
+
+# OS / エディタ
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/

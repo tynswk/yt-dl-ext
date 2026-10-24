@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>YouTube Downloader</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <span class="dot" id="dot"></span>
+    <span id="status">接続中…</span>
+  </header>
+
+  <section id="video">
+    <div id="title">—</div>
+    <div id="meta"></div>
+  </section>
+
+  <section id="controls">
+    <div class="seg" id="format" role="radiogroup">
+      <button data-v="mp4" class="on">MP4</button>
+      <button data-v="mp3">MP3</button>
+      <button data-v="wav">WAV</button>
+    </div>
+    <select id="quality"></select>
+    <div class="row">
+      <input id="outdir" type="text" spellcheck="false" autocomplete="off">
+      <button id="reveal" class="icon-btn" title="保存先を開く">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></svg>
+      </button>
+    </div>
+    <button id="go" class="primary">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+      ダウンロード
+    </button>
+  </section>
+
+  <section id="progress" hidden>
+    <div class="bar"><div id="fill"></div></div>
+    <div id="ptext"></div>
+  </section>
+
+  <p id="error" hidden></p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
